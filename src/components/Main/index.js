@@ -2,14 +2,22 @@ import React from 'react';
 import { string } from 'prop-types';
 import SideBar from '../SideBar';
 import Catalog from '../Catalog';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
+
 
 const Main = (props) => {
-    const { title, icon } = props;
+    const { title } = props;
     return (
         <div className='main'>
             <div className='headerMain'>
-            {title}
-            {icon ? <img className='icon' src={icon} alt="PokeBall" /> : null}
+                <div className='headerSide'>
+                <FontAwesomeIcon icon={faFilter} />
+                <span>{title}</span>
+                </div>
+                <div>
+                </div>
+
             </div>
             <SideBar />
             <Catalog />

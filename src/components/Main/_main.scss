@@ -15,6 +15,13 @@
         background-color: $ligh-gray;
         border-radius: 10px 10px 0 0;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 5fr;
+
+        .headerSide {
+            display:grid;
+            grid-template-columns: 0.4fr 1fr;
+            justify-items: center;
+            align-items: center;
+        }
     }
 }
