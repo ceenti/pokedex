@@ -16,7 +16,7 @@ class Home extends Component {
         return (
             <div className='homeContainer'>
                 <Header logo={logo} icon={icon}/>
-                <Main />
+                <Main title={'Category'} icon={icon}/>
             </div>
         );
     }

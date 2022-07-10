@@ -7,9 +7,11 @@ const Main = (props) => {
     const { title, icon } = props;
     return (
         <div className='main'>
-            <SideBar />
+            <div className='headerMain'>
             {title}
-            {icon}
+            {icon ? <img className='icon' src={icon} alt="PokeBall" /> : null}
+            </div>
+            <SideBar />
             <Catalog />
         </div>
     );

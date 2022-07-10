@@ -6,7 +6,6 @@ const SideBar = (props) => {
     const { title, icon } = props;
     return (
         <aside className='sideBar'>
-            Aquí el sidebar
             {title}
             {icon}
         </aside>
