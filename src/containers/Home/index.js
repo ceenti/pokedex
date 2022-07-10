@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 // import { oneOfType, arraOf, node } from 'prop-types';
 import Header from '../../components/Header';
 import Main from '../../components/Main';
+import icon from '../../assets/icons/pokeball.png';
+import logo from '../../assets/icons/logoPokemon.png';
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -12,9 +15,7 @@ class Home extends Component {
     render () {
         return (
             <div className='homeContainer'>
-                <Header/>
-                {/* Container */}
-                {/* Footer */}
+                <Header logo={logo} icon={icon}/>
                 <Main />
             </div>
         );

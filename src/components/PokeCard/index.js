@@ -9,9 +9,6 @@ const PokeCard = (props) => {
         <article className='pokeCard'>
             <FrontCard />
             <BackCard />
-            <span>{title}</span>
-            <p>{description}</p>
-            {image}
         </article>
     );
 };

@@ -1,3 +1,9 @@
 .pokeCard {
-    border: 2px solid red;
+    border: 2px solid blue;
+    justify-self: stretch;
+    align-items: stretch;
+    background-color: white;
+    display: grid;
+    grid-template: "f" 50%
+        "b" 50%;
 }

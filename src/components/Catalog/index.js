@@ -12,6 +12,9 @@ const Catalog = (props) => {
                 );
             })}
             <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
         </main>
     );
 };

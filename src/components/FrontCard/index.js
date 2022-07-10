@@ -4,7 +4,7 @@ import { string } from 'prop-types';
 const FrontCard = (props) => {
     const { title, description, image } = props;
     return (
-        <div>
+        <div className='frontCard'>
             PokeCard
             <p>
                 <span># Number</span>

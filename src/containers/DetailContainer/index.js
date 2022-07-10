@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import SideBar from '../../components/SideBar';
 import CatalogContainer from '../CatalogContainer';
 
-class Main extends Component {
+class DetailContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ class Main extends Component {
 
     render () {
         return (
-            <div>
+            <div className='DetailContainer'>
                 <SideBar/>
                 <CatalogContainer/>
                 Hola
@@ -21,11 +21,11 @@ class Main extends Component {
     }
 };
 
-Main.propTypes = {
+DetailContainer.propTypes = {
 };
 
-Main.defaultProps = {
+DetailContainer.defaultProps = {
 
 };
 
-export default Main;
+export default DetailContainer;

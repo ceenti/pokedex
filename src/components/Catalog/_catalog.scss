@@ -1,3 +1,9 @@
 .catalog {
-    flex: 10;
+    display: grid;
+    border: 5px solid black;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row-gap: 5px;
+    background-color: $base-background;
+    gap: 5px;
+    padding: 5px;
 }

@@ -12,9 +12,9 @@ class CatalogContainer extends Component {
 
     render () {
         return (
-            <div>
+            <div className='catalogContainer'>
                 <Search />
-                {/* <Catalog /> */}
+                <Catalog />
                 Hola
             </div>
         );

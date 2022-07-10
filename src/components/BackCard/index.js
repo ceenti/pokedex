@@ -4,7 +4,7 @@ import { string } from 'prop-types';
 const BackCard = (props) => {
     const { title, description, image } = props;
     return (
-        <div>
+        <div className='backCard'>
             <p>
                 Pokedex Entry
             </p>

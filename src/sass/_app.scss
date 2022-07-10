@@ -7,6 +7,11 @@
 @import '../components/Catalog/catalog';
 @import '../components/PokeCard/pokeCard';
 @import '../components/Header/header';
+@import '../components/FrontCard/frontCard';
+@import '../components/BackCard/backCard';
+// @import '../components/BackCard/';
+@import '../containers/CatalogContainer/catalogContainer';
+@import '../containers/DetailContainer/detailContainer';
 
 body {
     background-color: transparent;
