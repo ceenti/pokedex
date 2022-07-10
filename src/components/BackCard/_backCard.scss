@@ -9,7 +9,32 @@
     background-color: $white;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
-
     transition: transform 0.6s;
     transform-style: preserve-3d;
+
+    p {
+        margin: 0;
+        padding: 5px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 4fr));
+
+        &.abilities {
+            grid-template-columns: repeat(2, 6fr);
+        }
+
+        h4 {
+            margin: 0;
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+        span {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-align: center;
+            b {
+                display: block;
+            }
+        }
+    }
 }

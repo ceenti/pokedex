@@ -5,26 +5,26 @@ const BackCard = (props) => {
     const { title, description, image } = props;
     return (
         <div className='backCard'>
-            <p>
-                Abilities
+            <p className='abilities'>
+                <h4>Abilities</h4>
                 <span>Overgrow</span>
                 <span>Chlorophyll</span>
             </p>
             <p>
-                <span>Height: 0.7m</span>
-                <span>Weight: 6.9kg</span>
+                <span><b>Height</b> 0.7m</span>
+                <span><b>Weight</b> 6.9kg</span>
             </p>
             <p>
-                Base Stats
-                <span>HP:45</span>
-                <span>Attack:49</span>
-                <span>Defense:49</span>
-                <span>Sp. Atk:65</span>
-                <span>Sp. Def:65</span>
-                <span>Speed:45</span>
+                <h4>Base Stats</h4>
+                <span><b>HP</b> 45</span>
+                <span><b>Attack</b> 49</span>
+                <span><b>Defense</b> 49</span>
+                <span><b>Sp. Atk</b> 65</span>
+                <span><b>Sp. Def</b> 65</span>
+                <span><b>Speed</b> 45</span>
             </p>
             <p>
-                Evolution Chain
+                <h4>Evolution Chain</h4>
             </p>
         </div>
     );
