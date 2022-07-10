@@ -3,9 +3,32 @@
     align-items: stretch;
     background-color: white;
     grid-template:
-        "f" 50%
-        "b" 50%;
+        "f" 100%
+        "b" 100%;
     border: 2px solid $green;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0,22,41,0.1);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        .frontCard {
+            transform: rotateY(180deg);
+        }
+        .backCard {
+            transform: rotateY(0deg);
+        }
+    }
+
+    @keyframes fcard-spin {
+        100% {
+            transform: rotateY(180deg);
+        }
+    }
+
+    @keyframes bcard-spin {
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
 }

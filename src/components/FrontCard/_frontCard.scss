@@ -7,6 +7,9 @@
     grid-template-rows: auto;
     border-radius: 10px;
     overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 
     h3 {
         margin: 0;
