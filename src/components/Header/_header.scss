@@ -16,31 +16,26 @@
         background-position: center;
         background-size: cover;
     }
+
     .logo {
         width: 200px;
-        justify-self: start;
-        align-self: baseline;
-        position:relative;
-        padding-inline: 0.3rem;
-        transform: rotate(45deg);
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        align-self: center;
     }
+
     .icon {
         height: 90px;
         width: 90px;
-        padding: 10px;
         pointer-events: none;
-        grid-column-start: 3;
         grid-column-end: 4;
+        align-self: center;
     }
+
     @media (prefers-reduced-motion: no-preference) {
         .icon {
           animation: icon-spin infinite 7s ease-in-out;
         }
     }
+
     @keyframes icon-spin {
         0%{
             transform: rotate(10deg)
@@ -51,5 +46,5 @@
         100% {
             transform: rotate(10deg)
         }
-      }
+    }
 }
