@@ -10,7 +10,7 @@
 
     h3 {
         margin: 0;
-        padding: 0.2rem;
+        padding: 0.5rem;
         background-color: #fafafa;
     }
 
@@ -20,6 +20,24 @@
 
         img {
             width: 90%;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .sprite {
+          animation: Pokemon-image infinite 3s ease-in-out;
+        }
+    }
+
+    @keyframes Pokemon-image {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(3px)
+        }
+        100% {
+          transform: translateY(0px)
         }
     }
 
