@@ -4,15 +4,15 @@ import PokeCard from '../PokeCard';
 const Catalog = (props) => {
     const { title, items } = props;
     return (
-        <div>
-            Aquí la PokeCard
+        <main className='catalog'>
             {title}
             {items.map(item => {
                 return (
                     <PokeCard />
                 );
             })}
-        </div>
+            <PokeCard />
+        </main>
     );
 };
 

@@ -1,3 +1,31 @@
+.homeContainer {
+  margin: 0px;
+  padding: 0px;
+  overflow-y: auto;
+  font-weight: normal;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.sideBar {
+  border: 2px solid pink;
+}
+
+.catalog {
+  flex: 10;
+}
+
+.pokeCard {
+  border: 2px solid red;
+}
+
+.header {
+  border: 2px solid green;
+}
+
 body {
   background-color: transparent;
 }/*# sourceMappingURL=main.css.map */

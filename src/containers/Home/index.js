@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { oneOfType, arraOf, node } from 'prop-types';
 import Header from '../../components/Header';
-
+import Main from '../../components/Main';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -11,11 +11,11 @@ class Home extends Component {
 
     render () {
         return (
-            <div>
+            <div className='homeContainer'>
                 <Header/>
                 {/* Container */}
                 {/* Footer */}
-                Hola
+                <Main />
             </div>
         );
     }

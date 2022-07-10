@@ -1,3 +1,13 @@
+// Containers
+@import '../containers/Home/home';
+
+// Components
+@import '../components/Main/main';
+@import '../components/SideBar/sideBar';
+@import '../components/Catalog/catalog';
+@import '../components/PokeCard/pokeCard';
+@import '../components/Header/header';
+
 body {
     background-color: transparent;
 }

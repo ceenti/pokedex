@@ -5,10 +5,16 @@ const FrontCard = (props) => {
     const { title, description, image } = props;
     return (
         <div>
-            Aquí la FrontCard
-            {title}
-            {description}
-            {image}
+            PokeCard
+            <p>
+                <span># Number</span>
+                <span>Name</span>
+            </p>
+            <span>Pokemon Image</span>
+            <p>
+                <span>Types</span>
+                <span>Dark</span>
+            </p>
         </div>
     );
 };

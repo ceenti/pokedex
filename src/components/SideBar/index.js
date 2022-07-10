@@ -5,11 +5,11 @@ import { string } from 'prop-types';
 const SideBar = (props) => {
     const { title, icon } = props;
     return (
-        <div>
-            Aquí el header
+        <aside className='sideBar'>
+            Aquí el sidebar
             {title}
             {icon}
-        </div>
+        </aside>
     );
 };
 

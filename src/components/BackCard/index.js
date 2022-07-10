@@ -5,10 +5,21 @@ const BackCard = (props) => {
     const { title, description, image } = props;
     return (
         <div>
-            Aquí la BackCard
-            {title}
-            {description}
-            {image}
+            <p>
+                Pokedex Entry
+            </p>
+            <p>
+                Stats
+            </p>
+            <p>
+                Moves
+            </p>
+            <p>
+                Abilities
+            </p>
+            <p>
+                Evolution Chain
+            </p>
         </div>
     );
 };

@@ -1,15 +1,18 @@
 import React from 'react';
 import { string } from 'prop-types';
+import FrontCard from '../FrontCard';
+import BackCard from '../BackCard';
 
 const PokeCard = (props) => {
     const { title, description, image } = props;
     return (
-        <div>
-            Aquí la PokeCard
-            {title}
-            {description}
+        <article className='pokeCard'>
+            <FrontCard />
+            <BackCard />
+            <span>{title}</span>
+            <p>{description}</p>
             {image}
-        </div>
+        </article>
     );
 };
 

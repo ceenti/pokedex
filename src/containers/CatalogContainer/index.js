@@ -14,7 +14,7 @@ class CatalogContainer extends Component {
         return (
             <div>
                 <Search />
-                <Catalog />
+                {/* <Catalog /> */}
                 Hola
             </div>
         );
