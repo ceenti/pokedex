@@ -1,9 +1,7 @@
 .catalog {
     display: grid;
-    border: 1px solid #eee;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-row-gap: 5px;
     background-color: $base-background;
-    gap: 5px;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0.5rem;
     padding: 5px;
 }

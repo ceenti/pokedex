@@ -1,8 +1,9 @@
 .frontCard {
-    background-color: green;
+    background-color: $main-white;
     justify-self: stretch;
     grid-area: f;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    border-radius: 10px;
 }

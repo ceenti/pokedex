@@ -1,9 +1,11 @@
 .pokeCard {
-    border: 1px solid #eee;
+    border: 1px solid $ligh-gray;
     justify-self: stretch;
     align-items: stretch;
     background-color: white;
     display: grid;
     grid-template: "f" 50%
         "b" 50%;
+    border-radius: 10px;
+    padding: 0.2rem;
 }

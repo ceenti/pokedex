@@ -1,2 +1,36 @@
+// Fonts
+@font-face {
+    font-family: "RobotoBold";
+    src: local("RobotoBold"),
+     url('./../../assets/fonts/Roboto-Bold-webfont.ttf') format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: local("RobotoRegular"),
+     url('./../../assets/fonts/Roboto-Regular-webfont.ttf') format("truetype");
+    font-weight:normal;
+}
+
+@font-face {
+    font-family: "RobotoLight";
+    src: local("RobotoLight"),
+     url('./../../assets/fonts/Roboto-Light-webfont.ttf') format("truetype");
+    font-weight: light;
+}
+
+@font-face {
+    font-family: "RobotoMedium";
+    src: local("RobotoMedium"),
+     url('./../../assets/fonts/Roboto-Medium-webfont.ttf') format("truetype");
+    font-weight: medium;
+}
+
+// Color
+$main-white: #ffffff;
 $base-background: #fafafa;
 $proof: red;
+$main-font: #424242;
+$black-font: rgba(0,0,0,.87);
+$ligh-gray: #eee;

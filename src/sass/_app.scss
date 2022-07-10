@@ -1,3 +1,6 @@
+body {
+    background-color: transparent;
+}
 // Containers
 @import '../containers/Home/home';
 
@@ -13,6 +16,6 @@
 @import '../containers/CatalogContainer/catalogContainer';
 @import '../containers/DetailContainer/detailContainer';
 
-body {
-    background-color: transparent;
-}
+// Variables
+
+@import '../sass/utilities/variables';
