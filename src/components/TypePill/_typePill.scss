@@ -1,0 +1,16 @@
+.pill {
+  display: inline-block;
+  text-align: center; 
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: $white;
+  align-self: center;
+  font-size: 0.8rem;
+}
+
+.grass {
+  background: $grass;
+}
+.poison {
+  background: $poison;
+}
