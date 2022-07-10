@@ -1,19 +1,18 @@
 import React from 'react';
 import { string } from 'prop-types';
+import TypePill from '../TypePill';
 
 const FrontCard = (props) => {
     const { title, description, image } = props;
     return (
         <div className='frontCard'>
-            PokeCard
-            <p>
-                <span># Number</span>
-                <span>Name</span>
+            <h3>#001 Bulbasaur</h3>
+            <p className='sprite'>
+                <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg' alt='Bulbasaur sprite' />
             </p>
-            <span>Pokemon Image</span>
-            <p>
-                <span>Types</span>
-                <span>Dark</span>
+            <p className="types">
+                <TypePill name="grass" />
+                <TypePill name="poison" />
             </p>
         </div>
     );

@@ -2,6 +2,7 @@
     display: grid;
     background-color: $base-background;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 0.5rem;
+    grid-template-rows: min-content;
+    grid-gap: 1rem;
     padding: 5px;
 }

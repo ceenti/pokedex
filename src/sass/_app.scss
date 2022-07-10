@@ -3,6 +3,8 @@ body {
 }
 // Containers
 @import '../containers/Home/home';
+@import '../containers/CatalogContainer/catalogContainer';
+@import '../containers/DetailContainer/detailContainer';
 
 // Components
 @import '../components/Main/main';
@@ -12,9 +14,9 @@ body {
 @import '../components/Header/header';
 @import '../components/FrontCard/frontCard';
 @import '../components/BackCard/backCard';
+@import '../components/TypePill/typePill';
 // @import '../components/BackCard/';
-@import '../containers/CatalogContainer/catalogContainer';
-@import '../containers/DetailContainer/detailContainer';
+
 
 // Variables
 

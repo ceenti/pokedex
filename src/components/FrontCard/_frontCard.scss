@@ -6,4 +6,27 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     border-radius: 10px;
+    overflow: hidden;
+
+    h3 {
+        margin: 0;
+        padding: 0.2rem;
+        background-color: #fafafa;
+    }
+
+    .sprite {
+        align-self: center;
+        text-align: center;
+
+        img {
+            width: 90%;
+        }
+    }
+
+    .types {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-gap: 10%;
+    }
 }
