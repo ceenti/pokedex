@@ -11,7 +11,7 @@
 }
 
 .sideBar {
-  border: 2px solid pink;
+  border: 1px solid #eee;
 }
 
 .catalog {
@@ -19,11 +19,11 @@
 }
 
 .pokeCard {
-  border: 2px solid red;
+  border: 1px solid #eee;
 }
 
 .header {
-  border: 2px solid green;
+  border: 1px solid #eee;
 }
 
 body {

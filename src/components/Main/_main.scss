@@ -2,4 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     background-color: $base-background;
+    padding: 0.4rem;
+    border: 1px solid #eee;
+    gap: 5px;
 }

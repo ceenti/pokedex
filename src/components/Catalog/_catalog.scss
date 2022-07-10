@@ -1,6 +1,6 @@
 .catalog {
     display: grid;
-    border: 5px solid black;
+    border: 1px solid #eee;
     grid-template-columns: 25% 25% 25% 25%;
     grid-row-gap: 5px;
     background-color: $base-background;
