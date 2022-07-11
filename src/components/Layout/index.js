@@ -1,7 +1,10 @@
-import React from 'react';
-import { oneOfType, arraOf, node } from 'prop-types';
+import React, { Component } from 'react';
+import { oneOfType, arrayOf, node } from 'prop-types';
+import Header from '../Header';
+import icon from '../../assets/icons/pokeball.png';
+import logo from '../../assets/icons/logoPokemon.png';
 
-class Layout extends React.Component {
+class Layout extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -9,18 +12,22 @@ class Layout extends React.Component {
       }
 
     render () {
+        const { children } = this.props;
         return (
-            <div>
-                Hola Layout
-            </div>
+            <>
+                <Header logo={logo} icon={icon}/>
+                {children}
+            </>
         );
     }
 };
 
 Layout.propTypes = {
-children: oneOfType([arraOf(node), node]).isRequired
+    children: oneOfType([arrayOf(node),node]).isRequired
 };
 
 Layout.defaultProps = {
 
 };
+
+export default Layout;

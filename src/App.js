@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './containers/Home';
-import PokeCard from './components/PokeCard';
+import DetailContainer from './containers/DetailContainer';
 import './main.scss';
 
 const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/card' element={<PokeCard />} />
+      <Route path='/card' element={<DetailContainer />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>

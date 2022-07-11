@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import { oneOfType, arraOf, node } from 'prop-types';
-import SideBar from '../../components/SideBar';
-import CatalogContainer from '../CatalogContainer';
+import Layout from '../../components/Layout';
+import DetailsCard from '../../components/DetailsCard';
 
 class DetailContainer extends Component {
     constructor(props) {
@@ -12,11 +11,9 @@ class DetailContainer extends Component {
 
     render () {
         return (
-            <div className='DetailContainer'>
-                <SideBar/>
-                <CatalogContainer/>
-                Hola
-            </div>
+            <Layout>
+                <DetailsCard />
+            </Layout>
         );
     }
 };
