@@ -17,7 +17,7 @@
         padding: 5px;
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(50px, 4fr));
+        grid-template-columns: repeat(auto-fit, minmax(50px, 6fr));
 
         &.abilities {
             grid-template-columns: repeat(2, 6fr);
@@ -38,5 +38,27 @@
                 display: block;
             }
         }
+        &.stats span{
+            border-radius: 5px;
+        }
+    }
+
+    .hp {
+        background: $hp;
+    }
+    .atk {
+        background: $atk;
+    }
+    .def {
+        background: $def;
+    }
+    .sp_atk {
+        background: $sp_atk;
+    }
+    .sp_def {
+        background: $sp_def;
+    }
+    .speed {
+        background: $speed;
     }
 }
