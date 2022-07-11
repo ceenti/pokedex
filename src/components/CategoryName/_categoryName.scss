@@ -1,5 +1,5 @@
 .categoryItem {
-  background-color: $ligh-gray;
+  background-color: $light-gray;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -7,7 +7,7 @@
   height: 3.2rem;
   text-transform: uppercase;
   align-self: center;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: $main-font;
   cursor: pointer;
   & > span {
