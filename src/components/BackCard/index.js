@@ -14,14 +14,14 @@ const BackCard = (props) => {
                 <span><b>Height</b> 0.7m</span>
                 <span><b>Weight</b> 6.9kg</span>
             </p>
-            <p>
+            <p className="stats">
                 <h4>Base Stats</h4>
-                <span><b>HP</b> 45</span>
-                <span><b>Attack</b> 49</span>
-                <span><b>Defense</b> 49</span>
-                <span><b>Sp. Atk</b> 65</span>
-                <span><b>Sp. Def</b> 65</span>
-                <span><b>Speed</b> 45</span>
+                <span className="hp"><b>HP</b> 45</span>
+                <span className="atk"><b>Attack</b> 49</span>
+                <span className="def"><b>Defense</b> 49</span>
+                <span className="sp_atk"><b>Sp. Atk</b> 65</span>
+                <span className="sp_def"><b>Sp. Def</b> 65</span>
+                <span className="speed"><b>Speed</b> 45</span>
             </p>
             <p>
                 <h4>Evolution Chain</h4>
