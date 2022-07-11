@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, func, noop } from 'prop-types';
 import FrontCard from '../FrontCard';
 import BackCard from '../BackCard';
 
@@ -16,13 +16,15 @@ const PokeCard = (props) => {
 PokeCard.propTypes = {
 title: string,
 description: string,
-image: string
+image: string,
+onClick: func
 };
 
 PokeCard.defaultProps = {
 title: '',
 description: '',
-image: ''
+image: '',
+onClick: noop
 };
 
 export default PokeCard;

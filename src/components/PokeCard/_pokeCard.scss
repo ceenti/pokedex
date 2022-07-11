@@ -10,7 +10,7 @@
     box-shadow: 0px 0px 5px rgba(0,22,41,0.1);
     position: relative;
     overflow: hidden;
-
+    cursor: pointer;
     &:hover {
         .frontCard {
             transform: rotateY(180deg);

@@ -3,21 +3,27 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 1.2rem;
-  height: 3rem;
+  border-radius: 0.8rem;
+  height: 3.2rem;
   text-transform: uppercase;
   align-self: center;
   font-size: 0.8rem;
+  color: $main-font;
+  cursor: pointer;
   & > span {
-    color: $white;
     font-family: 'RobotoBold';
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   :first-child {
     margin: 10px;
     font-size: 1.1rem;
+    color: $main-font;
   }
   &:hover {
     background-color: $grass;
+    color: $main-white;
+    svg path {
+      fill : $main-white;
+    }
   }
 }
