@@ -5,13 +5,13 @@ import DetailContainer from './containers/DetailContainer';
 import './main.scss';
 
 const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/card' element={<DetailContainer />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/card' element={<DetailContainer />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
 );
 
 export default App;

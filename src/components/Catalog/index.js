@@ -1,33 +1,22 @@
 import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import PokeCard from '../PokeCard';
-const Catalog = (props) => {
-    const { title, items } = props;
-    return (
-        <main className='catalog'>
-            {title}
-            {items.map(item => {
-                return (
-                    <PokeCard />
-                );
-            })}
-            <PokeCard />
-            <PokeCard />
-            <PokeCard />
-            <PokeCard />
-            <PokeCard />
-        </main>
-    );
-};
+
+const Catalog = ({title, items}) => (
+    <main className='catalog'>
+        {title}
+        {items.map(item => <PokeCard key={item.id} pokemon={item} /> )}
+    </main>
+);
 
 Catalog.propTypes = {
-title: string,
-items: arrayOf(shape())
+    title: string,
+    items: arrayOf(shape())
 };
 
 Catalog.defaultProps = {
-title: '',
-items: []
+    title: '',
+    items: []
 };
 
 export default Catalog;

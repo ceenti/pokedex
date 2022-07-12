@@ -1,4 +1,7 @@
 .pokeCard {
+    display: flexbox;
+    // grid-column: auto;
+    // grid-row: auto;
     justify-self: stretch;
     align-items: stretch;
     background-color: white;

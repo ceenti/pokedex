@@ -1,38 +1,39 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number, arrayOf, shape } from 'prop-types';
 import TypePill from '../TypePill';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faStar} from '@fortawesome/free-solid-svg-icons';
-const FrontCard = (props) => {
-    const { title, description, image } = props;
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+const FrontCard = ({pokeId, name, sprite, types}) => {
     return (
         <div className='frontCard'>
             <div className='headerCard'>
-                <h3>#001 Bulbasaur</h3>
+                <h3>#{pokeId} {name}</h3>
                 <FontAwesomeIcon icon={faStar}/>
             </div>
-
-            <p className='sprite'>
-                <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg' alt='Bulbasaur sprite' />
-            </p>
-            <p className="types">
+            <div className='spriteContainer'>
+                <img className="sprite" src={sprite} alt={`${name} sprite`} />
+            </div>
+            <div className="types">
                 <TypePill name="grass" />
                 <TypePill name="poison" />
-            </p>
+            </div>
         </div>
     );
 };
 
 FrontCard.propTypes = {
-title: string,
-description: string,
-image: string
+    pokeId: number,
+    name: string,
+    sprite: string,
+    types: arrayOf(shape({}))
 };
 
 FrontCard.defaultProps = {
-title: '',
-description: '',
-image: ''
+    pokeId: null,
+    name: '',
+    sprite: '',
+    types: []
 };
 
 export default FrontCard;
