@@ -1,7 +1,8 @@
 .header {
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-column: repeat(2, 4fr);
     height: 130px;
+    padding: 1rem;
     &::after {
         content: "";
         top: 0;
@@ -20,6 +21,9 @@
     .logo {
         width: 200px;
         align-self: center;
+        pointer-events: none;
+        align-self: center;
+
     }
 
     .icon {
@@ -28,6 +32,7 @@
         pointer-events: none;
         grid-column-end: 4;
         align-self: center;
+        justify-self: flex-end;
     }
 
     @media (prefers-reduced-motion: no-preference) {

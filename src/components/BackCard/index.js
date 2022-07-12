@@ -14,7 +14,7 @@ const BackCard = (props) => {
                 <span><b>Height</b> 0.7m</span>
                 <span><b>Weight</b> 6.9kg</span>
             </div>
-            <p className="stats">
+            <div className="stats">
                 <h4>Base Stats</h4>
                 <span className="hp"><b>HP</b> 45</span>
                 <span className="atk"><b>Attack</b> 49</span>
@@ -22,10 +22,10 @@ const BackCard = (props) => {
                 <span className="sp_atk"><b>Sp. Atk</b> 65</span>
                 <span className="sp_def"><b>Sp. Def</b> 65</span>
                 <span className="speed"><b>Speed</b> 45</span>
-            </p>
-            <p>
+            </div>
+            <div>
                 <h4>Evolution Chain</h4>
-            </p>
+            </div>
         </article>
     );
 };

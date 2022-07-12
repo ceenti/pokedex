@@ -12,7 +12,7 @@ const FrontCard = ({pokeId, name, sprite, types}) => {
                 <FontAwesomeIcon icon={faStar}/>
             </div>
             <div className='spriteContainer'>
-                <img className="sprite" src={sprite} alt={`${name} sprite`} />
+                <img className="sprite" src={sprite} alt={`${name} sprite`} width={200} height={250}/>
             </div>
             <div className="types">
                 <TypePill name="grass" />

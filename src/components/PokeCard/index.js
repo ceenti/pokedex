@@ -6,7 +6,7 @@ import BackCard from '../BackCard';
 const PokeCard = ({ pokemon }) => {
     const { id: pokeId, name, pokemon_v2_pokemontypes: types } = pokemon;
     const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`;
-
+    console.log(pokemon);
     return (
         <article className='pokeCard'>
             <FrontCard pokeId={pokeId} name={name} types={types} sprite={sprite} />
