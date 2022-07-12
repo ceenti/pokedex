@@ -4,7 +4,7 @@ import CategoryName from '../CategoryName';
 // import Filter 
 
 const SideBar = ({items, icon}) => {
-    console.log(items);
+    console.log('sideBar', items);
     return (
         <aside className='sideBar'>
             <CategoryName title={'Type'} icon={icon} categoryItems={items} />

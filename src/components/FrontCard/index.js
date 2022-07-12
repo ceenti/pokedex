@@ -15,7 +15,7 @@ const FrontCard = ({pokeId, name, sprite, types}) => {
                 <img className="sprite" src={sprite} alt={`${name} sprite`} width={200} height={250}/>
             </div>
             <div className="types">
-                {types.map(type => <TypePill name={type.pokemon_v2_type.name} />)}
+                {types.map(type => <TypePill key={type.pokemon_v2_type.id} name={type.pokemon_v2_type.name} />)}
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ const CategoryName = ({ title, categoryItems }) => {
           <FontAwesomeIcon icon={faChevronDown} className='crevron' fontSize={13} fontWeight={faBold}/>
         </div>
         <div className='categoryItems'>
-          {categoryItems.map(item => <span className={`${display} ? itemClass ${item.name} `}>{item.name}</span>)}
+          {categoryItems.map(item => <span key={item.id} className={`${display} ? itemClass ${item.name} `}>{item.name}</span>)}
         </div>
       </div>
     );

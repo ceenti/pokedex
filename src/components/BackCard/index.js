@@ -33,7 +33,7 @@ const BackCard = ({abilities, weight, height, evolutions, stats}) => {
             <article className='backCard'>
                 <div className='abilities'>
                     <h4>Abilities</h4>
-                    {abilities.map(ability => <span>{ability.pokemon_v2_ability.name}</span>)}
+                    {abilities.map(ability => <span key={ability.pokemon_v2_ability.id} >{ability.pokemon_v2_ability.name}</span>)}
                 </div>
 
                 <div>
@@ -54,7 +54,7 @@ const BackCard = ({abilities, weight, height, evolutions, stats}) => {
                     {evolutions.map(evolution => {
                         const ev_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${evolution.id}.svg`;
                         return (
-                            <img className="sprite" src={ev_sprite} alt={`${evolution.name} sprite`} width={20} height={25}/>
+                            <img className="sprite" key={evolution.id} src={ev_sprite} alt={`${evolution.name} sprite`} width={20} height={25}/>
                         );
                     })}
                 </div>
