@@ -1,7 +1,6 @@
 .categoryItem {
-  background-color: $light-gray;
   display: flex;
-  justify-content: flex-start;
+  justify-content:space-around;
   align-items: center;
   border-radius: 0.8rem;
   height: 3.2rem;
@@ -10,6 +9,12 @@
   font-size: 0.6rem;
   color: $main-font;
   cursor: pointer;
+
+  .crevron {
+    fill: $base-background;
+    font-weight: bold;
+  }
+
   & > span {
     font-family: 'RobotoBold';
     font-size: 1rem;
@@ -19,11 +24,87 @@
     font-size: 1.1rem;
     color: $main-font;
   }
+
   &:hover {
-    background-color: $grass;
+    background-color: $base-background;
     color: $main-white;
-    svg path {
-      fill : $main-white;
+  }
+}
+
+.categoryItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  .itemClass {
+    display: inline;
+    padding: 5px;
+    text-align: center; 
+    border-radius: 10px;
+    text-transform: capitalize;
+    color: $white;
+    align-self: center;
+    font-size: 0.8rem;
+    opacity: 0.3;
+    font-weight: bold;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
     }
   }
+}
+
+.normal {
+  background: $normal;
+}
+.fighting {
+  background: $fighting;
+}
+.flying {
+  background: $flying;
+}
+.poison {
+  background: $poison;
+}
+.ground {
+  background: $ground;
+}
+.rock {
+  background: $rock;
+}
+.bug {
+  background: $bug;
+}
+.ghost {
+  background: $ghost;
+}
+.steel {
+  background: $steel;
+}
+.fire {
+  background: $fire;
+}
+.water {
+  background: $water;
+}
+.grass {
+  background: $grass;
+}
+.electric {
+  background: $electric;
+}
+.psychic {
+  background: $psychic;
+}
+.ice {
+  background: $ice;
+}
+.dragon {
+  background: $dragon;
+}
+.dark {
+  background: $dark;
+}
+.fairy {
+  background: $fairy;
 }

@@ -1,45 +1,87 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number, arrayOf, shape,  } from 'prop-types';
 
-const BackCard = (props) => {
-    const { title, description, image } = props;
-    return (
-        <article className='backCard'>
-            <div className='abilities'>
-                <h4>Abilities</h4>
-                <span>Overgrow</span>
-                <span>Chlorophyll</span>
-            </div>
-            <div>
-                <span><b>Height</b> 0.7m</span>
-                <span><b>Weight</b> 6.9kg</span>
-            </div>
-            <div className="stats">
-                <h4>Base Stats</h4>
-                <span className="hp"><b>HP</b> 45</span>
-                <span className="atk"><b>Attack</b> 49</span>
-                <span className="def"><b>Defense</b> 49</span>
-                <span className="sp_atk"><b>Sp. Atk</b> 65</span>
-                <span className="sp_def"><b>Sp. Def</b> 65</span>
-                <span className="speed"><b>Speed</b> 45</span>
-            </div>
-            <div>
-                <h4>Evolution Chain</h4>
-            </div>
-        </article>
-    );
+const STATS = {
+    'hp': {
+        className: 'hp',
+        label: 'HP'
+    },
+    'attack': {
+        className: 'atk',
+        label: 'Attack'
+    },
+    'defense': {
+        className: 'def',
+        label: 'Defense'
+    },
+    'special-attack': {
+        className: 'sp_atk',
+        label: 'Sp. Atk'
+    },
+    'special-defense': {
+        className: 'sp_def',
+        label: 'Sp. Def'
+    },
+    'speed': {
+        className: 'speed',
+        label: 'Speed'
+    }
+}
+
+const BackCard = ({abilities, weight, height, evolutions, stats}) => {
+    return( 
+            <article className='backCard'>
+                <div className='abilities'>
+                    <h4>Abilities</h4>
+                    {abilities.map(ability => <span>{ability.pokemon_v2_ability.name}</span>)}
+                </div>
+
+                <div>
+                    <span><b>Height</b> {height}</span>
+                    <span><b>Weight</b> {weight}</span>
+                </div>
+
+                <div className="stats">
+                    <h4>Base Stats</h4>
+                    {stats.map(stat => {
+                        const statInfo = STATS[stat.pokemon_v2_stat.name];
+                        return <span className={statInfo.className}><b>{statInfo.label}</b>{stat.base_stat}</span>
+                    })}
+                </div>
+
+                <div className='evolutions'>
+                    <h4>Evolution Chain</h4>
+                    {evolutions.map(evolution => {
+                        const ev_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${evolution.id}.svg`;
+                        return (
+                            <img className="sprite" src={ev_sprite} alt={`${evolution.name} sprite`} width={20} height={25}/>
+                        );
+                    })}
+                </div>
+            </article>
+    )
 };
 
 BackCard.propTypes = {
-title: string,
-description: string,
-image: string
+    title: string,
+    description: string,
+    image: string,
+    abilities: arrayOf(shape()),
+    weight: number,
+    height: number,
+    evolutions: arrayOf(shape()),
+    stats: arrayOf(shape())
 };
 
 BackCard.defaultProps = {
-title: '',
-description: '',
-image: ''
+    title: '',
+    description: '',
+    image: '',
+    abilities: [],
+    weight: 0,
+    height: 0,
+    evolutions: [],
+    stats: []
 };
 
 export default BackCard;

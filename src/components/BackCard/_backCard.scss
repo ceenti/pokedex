@@ -42,6 +42,10 @@
         &.stats span{
             border-radius: 5px;
         }
+
+        &.evolutions {
+            grid-template-columns: repeat(3, max(4fr, 6fr));
+        }
     }
 
     .hp {
