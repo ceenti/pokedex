@@ -1,32 +1,6 @@
 import React from 'react';
 import { string, number, arrayOf, shape,  } from 'prop-types';
-
-const STATS = {
-    'hp': {
-        className: 'hp',
-        label: 'HP'
-    },
-    'attack': {
-        className: 'atk',
-        label: 'Attack'
-    },
-    'defense': {
-        className: 'def',
-        label: 'Defense'
-    },
-    'special-attack': {
-        className: 'sp_atk',
-        label: 'Sp. Atk'
-    },
-    'special-defense': {
-        className: 'sp_def',
-        label: 'Sp. Def'
-    },
-    'speed': {
-        className: 'speed',
-        label: 'Speed'
-    }
-}
+import { STATS } from '../../constants';
 
 const BackCard = ({abilities, weight, height, evolutions, stats}) => {
     return( 

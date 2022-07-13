@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
+import { useParams } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import DetailsCard from '../../components/DetailsCard';
 
-class DetailContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-      }
-
-    render () {
-        return (
-            <Layout>
-                <DetailsCard />
-            </Layout>
-        );
-    }
+const DetailContainer = () => {
+    const { id } = useParams();
+    return (
+        <Layout>
+            <DetailsCard id={id} />
+        </Layout>
+    );    
 };
 
-DetailContainer.propTypes = {
-};
+DetailContainer.propTypes = {};
 
-DetailContainer.defaultProps = {
-
-};
+DetailContainer.defaultProps = {};
 
 export default DetailContainer;
