@@ -83,3 +83,38 @@ export const GET_GENERATIONS = gql`{
     name
   }
 }`;
+
+export const GET_POKEMONS_BY_TYPE = gql `query Pokemons($type: String!) {
+  pokedex: pokemon_v2_pokemon(where: {pokemon_v2_pokemontypes: {pokemon_v2_type: {name: {_eq: $type}}}, pokemon_v2_pokemonspecy: {generation_id: {_in: [1,2]}}}, order_by: { id: asc}) {
+    id
+    name
+    weight
+    height
+    pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        name
+        id
+      }
+    }
+    pokemon_v2_pokemonabilities {
+      pokemon_v2_ability {
+        name
+        id
+      }
+    }
+    pokemon_v2_pokemonstats {
+        pokemon_v2_stat {
+        name
+      }
+      base_stat
+    }
+    pokemon_v2_pokemonspecy {
+      pokemon_v2_evolutionchain {
+        pokemon_v2_pokemonspecies(order_by: {id: asc}) {
+          id
+          name
+        }
+      }
+    }
+  }
+}`;

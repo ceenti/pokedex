@@ -10,10 +10,18 @@ import Loading from '../../components/Loading';
 
 const Home = () => {
     const { loading, error, data } = useQuery( GET_ALL_POKEMON );
+    const [selectedType, setSelectedType] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
     const loadingComponent = <Loading />
-    const content = <Main title={'Category'} icon={icon} data={data?.pokedex} isLoading={isLoading} loadingOn={setIsLoading}/>
+    const content = 
+        <Main
+            title={'Category'}
+            icon={icon}
+            data={data?.pokedex}
+            isLoading={isLoading}
+            loadingOn={setIsLoading}
+        />;
     if (error) return <p>Error :(</p>;
     return (
         <Layout>
