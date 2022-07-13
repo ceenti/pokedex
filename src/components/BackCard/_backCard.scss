@@ -46,6 +46,7 @@
         &.evolutions {
             grid-template-columns: repeat(3, max(4fr, 6fr));
             justify-items: center;
+            align-items: baseline;
         }
     }
 }

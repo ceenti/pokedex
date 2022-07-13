@@ -54,7 +54,7 @@ const BackCard = ({abilities, weight, height, evolutions, stats}) => {
                     {evolutions.map(evolution => {
                         const ev_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${evolution.id}.svg`;
                         return (
-                            <img className="sprite" key={evolution.id} src={ev_sprite} alt={`${evolution.name} sprite`} width={20} height={25}/>
+                            <img className="sprite" key={evolution.id} src={ev_sprite} alt={`${evolution.name} sprite`} width={30} height={30}/>
                         );
                     })}
                 </div>
