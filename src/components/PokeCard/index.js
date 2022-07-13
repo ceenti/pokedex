@@ -19,9 +19,10 @@ const PokeCard = ({ pokemon }) => {
         pokemon_v2_pokemonstats: stats
     } = pokemon;
     const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`;
-
+    const colorType = types[0].pokemon_v2_type.name;
+    console.log('First type', types[0].pokemon_v2_type.name);
     return (
-        <article className='pokeCard'>
+        <article className={`pokeCard ${colorType}`}>
             <FrontCard pokeId={pokeId} name={name} types={types} sprite={sprite} />
             <BackCard 
                 abilities={abilities} 

@@ -7,8 +7,8 @@ const SideBar = ({items, icon, gen_items}) => {
     console.log('sideBar', gen_items);
     return (
         <aside className='sideBar'>
-            <CategoryName title={'Type'} icon={icon} categoryItems={items} />
             <CategoryName title={'Generation'} icon={icon} categoryItems={gen_items}/>
+            <CategoryName title={'Type'} icon={icon} categoryItems={items} />
         </aside>
     );
 };

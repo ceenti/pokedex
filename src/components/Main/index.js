@@ -21,8 +21,8 @@ const Main = ({title, data, loadingOn}) => {
         <div className='main'>
             <div className='headerMain'>
                 <div className='headerSide'>
-                    <FontAwesomeIcon icon={faFilter} />
-                    <span>{title}</span>
+                    <FontAwesomeIcon icon={faFilter} color={'gray'}/>
+                    <h3 className='mainHeader'>{title}</h3>
                 </div>
                 <div>
                 </div>
