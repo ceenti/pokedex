@@ -1,8 +1,6 @@
 .details {
     display: grid;
     border-radius: 10px 10px 0 0;
-    grid-template: "head head"
-                   "front back";
     margin-inline: 1rem;
     border: 1px solid #eee;
     gap: 5px;
@@ -10,7 +8,6 @@
 
     .headerDetails{ 
         display: grid;
-        grid-area: head;
         grid-template-columns: repeat(3, 1fr);
         justify-content: flex-start;
         align-items: center;
@@ -28,8 +25,13 @@
             height: 3rem;
             cursor: pointer;
         }
+    }
 
-}
+    .cardDetails {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
     div {
         justify-content: center;
         text-align: center;

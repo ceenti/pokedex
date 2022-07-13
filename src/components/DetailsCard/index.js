@@ -43,40 +43,42 @@ const DetailsCard = ({ id }) => {
                 <h1 className='headerTitle'>#{pokeId} {name}</h1>
             </div>
             
-            <div>
+            <div className='cardDetails'>
                 <div>
-                    {types.map(type => <TypePill key={type.pokemon_v2_type.id} name={type.pokemon_v2_type.name} />)}
-                </div>
-                <div>
-                    <img className="sprite" src={sprite} alt={`${name} sprite`} width={300} height={450}/>
-                </div>
-            </div>
-
-            <div>
-                <div className="abilities">
-                    <h4>Abilities</h4>
-                    {abilities.map(ability => <span className="ability" key={ability.pokemon_v2_ability.id} >{ability.pokemon_v2_ability.name}</span>)}
-
-                    <span><b>Height</b> {height}</span>
-                    <span><b>Weight</b> {weight}</span>
-                </div>
-
-                <div className="stats">
-                    <h4>Base Stats</h4>
-                    {stats.map((stat, index) => {
-                        const statInfo = STATS[stat.pokemon_v2_stat.name];
-                        return <span key={index} className={statInfo.className}><b>{statInfo.label}</b>{stat.base_stat}</span>
-                    })}
+                    <div>
+                        {types.map(type => <TypePill key={type.pokemon_v2_type.id} name={type.pokemon_v2_type.name} />)}
+                    </div>
+                    <div>
+                        <img className="sprite" src={sprite} alt={`${name} sprite`} width={300} height={450}/>
+                    </div>
                 </div>
 
                 <div>
-                    <h4>Evolution Chain</h4>
-                    {evolutions.map(evolution => {
-                        const ev_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${evolution.id}.svg`;
-                        return (
-                            <img className="sprite" key={evolution.id} src={ev_sprite} alt={`${evolution.name} sprite`} width={80} height={85}/>
-                        );
-                    })}
+                    <div className="abilities">
+                        <h4>Abilities</h4>
+                        {abilities.map(ability => <span className="ability" key={ability.pokemon_v2_ability.id} >{ability.pokemon_v2_ability.name}</span>)}
+
+                        <span><b>Height</b> {height}</span>
+                        <span><b>Weight</b> {weight}</span>
+                    </div>
+
+                    <div className="stats">
+                        <h4>Base Stats</h4>
+                        {stats.map((stat, index) => {
+                            const statInfo = STATS[stat.pokemon_v2_stat.name];
+                            return <span key={index} className={statInfo.className}><b>{statInfo.label}</b>{stat.base_stat}</span>
+                        })}
+                    </div>
+
+                    <div>
+                        <h4>Evolution Chain</h4>
+                        {evolutions.map(evolution => {
+                            const ev_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${evolution.id}.svg`;
+                            return (
+                                <img className="sprite" key={evolution.id} src={ev_sprite} alt={`${evolution.name} sprite`} width={80} height={85}/>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </article>
