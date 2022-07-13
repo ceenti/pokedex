@@ -37,7 +37,7 @@ const DetailsCard = ({ id }) => {
     return (
         <article className="details">
             <div className={`headerDetails ${types[0].pokemon_v2_type.name}`}>
-                <button className={`backBttn ${types[0].pokemon_v2_type.name}`} onClick={() => navigate(-1)}>
+                <button className={`backBttn ${types[0].pokemon_v2_type.name}`} onClick={() => navigate('/')}>
                     <FontAwesomeIcon icon={faChevronLeft} size={15}/>
                 </button>
                 <h1 className='headerTitle'>#{pokeId} {name}</h1>
