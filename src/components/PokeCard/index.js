@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { shape, func, noop } from 'prop-types';
 import FrontCard from '../FrontCard';
 import BackCard from '../BackCard';
@@ -18,10 +19,15 @@ const PokeCard = ({ pokemon }) => {
         },
         pokemon_v2_pokemonstats: stats
     } = pokemon;
+    const navigate = useNavigate();
     const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`;
     const colorType = types[0].pokemon_v2_type.name;
+
+    const redirect = id => {
+        navigate(`/card/${id}`);
+    };
     return (
-        <article className={`pokeCard ${colorType}`}>
+        <article className={`pokeCard ${colorType}`} onClick={() => {redirect(pokeId)}}>
             <FrontCard pokeId={pokeId} name={name} types={types} sprite={sprite} />
             <BackCard 
                 abilities={abilities} 
