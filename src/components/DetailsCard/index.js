@@ -1,11 +1,15 @@
 import React from 'react';
-import { string, number } from 'prop-types';
+import { number } from 'prop-types';
 import TypePill from '../TypePill';
 import { useQuery } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 import { GET_POKEMON } from '../../ApolloClient/src/queries';
 import { STATS } from '../../constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const DetailsCard = ({ id }) => {
+    const navigate = useNavigate();
     const pokemonData = useQuery(GET_POKEMON, {
         variables: { id },
     });
@@ -32,7 +36,13 @@ const DetailsCard = ({ id }) => {
 
     return (
         <article className="details">
-            <h1 className={types[0].pokemon_v2_type.name}>#{pokeId} {name}</h1>
+            <div className={`headerDetails ${types[0].pokemon_v2_type.name}`}>
+                <button className={`backBttn ${types[0].pokemon_v2_type.name}`} onClick={() => navigate(-1)}>
+                    <FontAwesomeIcon icon={faChevronLeft} size={15}/>
+                </button>
+                <h1 className='headerTitle'>#{pokeId} {name}</h1>
+            </div>
+            
             <div>
                 <div>
                     {types.map(type => <TypePill key={type.pokemon_v2_type.id} name={type.pokemon_v2_type.name} />)}

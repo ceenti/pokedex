@@ -8,14 +8,28 @@
     gap: 5px;
     overflow: hidden;
 
-    h1 {
-        text-align: center;
-        text-transform: uppercase;
+    .headerDetails{ 
+        display: grid;
         grid-area: head;
-        margin: 0;
-        padding: 1rem;
-    }
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: flex-start;
+        align-items: center;
+        padding-inline: 1rem;
 
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 1rem;
+        }
+        .backBttn {
+            border: none;
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+        }
+
+}
     div {
         justify-content: center;
         text-align: center;
