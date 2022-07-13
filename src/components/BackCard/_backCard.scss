@@ -45,25 +45,7 @@
 
         &.evolutions {
             grid-template-columns: repeat(3, max(4fr, 6fr));
+            justify-items: center;
         }
-    }
-
-    .hp {
-        background: $hp;
-    }
-    .atk {
-        background: $atk;
-    }
-    .def {
-        background: $def;
-    }
-    .sp_atk {
-        background: $sp_atk;
-    }
-    .sp_def {
-        background: $sp_def;
-    }
-    .speed {
-        background: $speed;
     }
 }

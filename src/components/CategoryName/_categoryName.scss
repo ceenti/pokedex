@@ -1,14 +1,19 @@
 .categoryItem {
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: center;
-  border-radius: 0.8rem;
-  height: 3.2rem;
+  border-radius: 0.2rem;
+  height: 2rem;
   text-transform: uppercase;
   align-self: center;
   font-size: 0.6rem;
   color: $main-font;
   cursor: pointer;
+  border: none;
+  width: 100%;
+  margin-bottom: 5px;
+  padding-inline: 1.2rem;
+  background-color: $base-background;
 
   .crevron {
     fill: $base-background;
@@ -26,9 +31,12 @@
   }
 
   &:hover {
-    background-color: $base-background;
+    background-color: $light-gray;
     color: $main-white;
   }
+}
+.displayItems {
+  display: none;
 }
 
 .categoryItems {
@@ -37,16 +45,16 @@
   gap: 5px;
   .itemClass {
     display: inline;
-    padding: 5px;
+    padding: 2px;
     text-align: center; 
     border-radius: 10px;
     text-transform: capitalize;
     color: $white;
     align-self: center;
     font-size: 0.8rem;
-    opacity: 0.3;
+    opacity: 0.55;
     font-weight: bold;
-
+    border: none;
     &:hover {
       opacity: 1;
       cursor: pointer;
@@ -54,57 +62,7 @@
   }
 }
 
-.normal {
-  background: $normal;
-}
-.fighting {
-  background: $fighting;
-}
-.flying {
-  background: $flying;
-}
-.poison {
-  background: $poison;
-}
-.ground {
-  background: $ground;
-}
-.rock {
-  background: $rock;
-}
-.bug {
-  background: $bug;
-}
-.ghost {
-  background: $ghost;
-}
-.steel {
-  background: $steel;
-}
-.fire {
-  background: $fire;
-}
-.water {
-  background: $water;
-}
-.grass {
-  background: $grass;
-}
-.electric {
-  background: $electric;
-}
-.psychic {
-  background: $psychic;
-}
-.ice {
-  background: $ice;
-}
-.dragon {
-  background: $dragon;
-}
-.dark {
-  background: $dark;
-}
-.fairy {
-  background: $fairy;
+.selectedItem {
+  display: none;
+  transform: fade-out;
 }

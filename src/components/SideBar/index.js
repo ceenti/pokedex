@@ -3,13 +3,12 @@ import { string, arrayOf, shape } from 'prop-types';
 import CategoryName from '../CategoryName';
 // import Filter 
 
-const SideBar = ({items, icon}) => {
-    console.log('sideBar', items);
+const SideBar = ({items, icon, gen_items}) => {
+    console.log('sideBar', gen_items);
     return (
         <aside className='sideBar'>
             <CategoryName title={'Type'} icon={icon} categoryItems={items} />
-            <CategoryName title={'Color'} icon={icon} />
-            <CategoryName title={'Generation'} icon={icon} />
+            <CategoryName title={'Generation'} icon={icon} categoryItems={gen_items}/>
         </aside>
     );
 };
@@ -17,13 +16,15 @@ const SideBar = ({items, icon}) => {
 SideBar.propTypes = {
     title: string,
     icon: string,
-    items: arrayOf(shape())
+    items: arrayOf(shape()),
+    gen_items: arrayOf(shape())
 };
 
 SideBar.defaultProps = {
     title: '',
     icon: '',
-    items: []
+    items: [],
+    gen_items: []
 };
 
 export default SideBar;

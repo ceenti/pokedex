@@ -37,6 +37,10 @@
 
     @media (prefers-reduced-motion: no-preference) {
         .icon {
+
+            -moz-animation: icon-spin infinite 7s ease-in-out;
+            -o-animation: icon-spin infinite 7s ease-in-out;
+            -webkit-animation: icon-spin infinite 7s ease-in-out;
           animation: icon-spin infinite 7s ease-in-out;
         }
     }

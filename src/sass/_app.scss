@@ -25,3 +25,86 @@ body {
 // Variables
 
 @import '../sass/utilities/variables';
+
+/*** General classes ***/
+// Generations
+.generation-i {
+    background: #ACD36C;
+}
+.generation-ii {
+    background: #DCD677;
+}
+// Types
+.normal {
+    background: $normal;
+}
+.fighting {
+    background: $fighting;
+}
+.flying {
+    background: $flying;
+}
+.poison {
+    background: $poison;
+}
+.ground {
+    background: $ground;
+}
+.rock {
+    background: $rock;
+}
+.bug {
+    background: $bug;
+}
+.ghost {
+    background: $ghost;
+}
+.steel {
+    background: $steel;
+}
+.fire {
+    background: $fire;
+}
+.water {
+    background: $water;
+}
+.grass {
+    background: $grass;
+}
+.electric {
+    background: $electric;
+}
+.psychic {
+    background: $psychic;
+}
+.ice {
+    background: $ice;
+}
+.dragon {
+    background: $dragon;
+}
+.dark {
+    background: $dark;
+}
+.fairy {
+    background: $fairy;
+}
+// Stats
+.hp {
+    background: $hp;
+}
+.atk {
+    background: $atk;
+}
+.def {
+    background: $def;
+}
+.sp_atk {
+    background: $sp_atk;
+}
+.sp_def {
+    background: $sp_def;
+}
+.speed {
+    background: $speed;
+}
