@@ -43,9 +43,9 @@ const BackCard = ({abilities, weight, height, evolutions, stats}) => {
 
                 <div className="stats">
                     <h4>Base Stats</h4>
-                    {stats.map(stat => {
+                    {stats.map((stat, index) => {
                         const statInfo = STATS[stat.pokemon_v2_stat.name];
-                        return <span className={statInfo.className}><b>{statInfo.label}</b>{stat.base_stat}</span>
+                        return <span key={index} className={statInfo.className}><b>{statInfo.label}</b>{stat.base_stat}</span>
                     })}
                 </div>
 

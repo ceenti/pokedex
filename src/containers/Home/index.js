@@ -5,14 +5,14 @@ import icon from '../../assets/icons/pokeball.png';
 import Layout from '../../components/Layout';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_POKEMON } from '../../ApolloClient/src/queries';
-import ReactLoading from 'react-loading';
+import Loading from '../../components/Loading';
 
 
 const Home = () => {
     const { loading, error, data } = useQuery( GET_ALL_POKEMON );
     const [isLoading, setIsLoading] = useState(false);
 
-    const loadingComponent = <ReactLoading className='loading' type={'spinningBubbles'} color={'gray'} width={40} height={40}/>
+    const loadingComponent = <Loading />
     const content = <Main title={'Category'} icon={icon} data={data?.pokedex} isLoading={isLoading} loadingOn={setIsLoading}/>
     if (error) return <p>Error :(</p>;
     return (
