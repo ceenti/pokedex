@@ -3,12 +3,10 @@ import { string, arrayOf, shape, func, noop } from 'prop-types';
 import CategoryName from '../CategoryName';
 // import Filter 
 
-const SideBar = ({items, icon, gen_items, onSelect}) => {
-    console.log('sideBar', gen_items);
+const SideBar = ({items, icon, gen_items, onSelect, selectedType}) => {
     return (
         <aside className='sideBar'>
-            <CategoryName title={'Generation'} icon={icon} categoryItems={gen_items}/>
-            <CategoryName title={'Type'} icon={icon} categoryItems={items} onSelect={onSelect}/>
+            <CategoryName title={'Type'} icon={icon} categoryItems={items} onSelect={onSelect} selectedType={selectedType}/>
         </aside>
     );
 };
@@ -18,7 +16,8 @@ SideBar.propTypes = {
     icon: string,
     items: arrayOf(shape()),
     gen_items: arrayOf(shape()),
-    onSelect: func
+    onSelect: func,
+    selectedType: string
 };
 
 SideBar.defaultProps = {
@@ -26,7 +25,8 @@ SideBar.defaultProps = {
     icon: '',
     items: [],
     gen_items: [],
-    onSelect: noop
+    onSelect: noop,
+    selectedType: ''
 };
 
 export default SideBar;

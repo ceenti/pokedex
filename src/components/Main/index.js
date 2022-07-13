@@ -9,20 +9,16 @@ import { GET_TYPES, GET_GENERATIONS, GET_POKEMONS_BY_TYPE } from '../../ApolloCl
 
 const Main = ({title, data, loadingOn}) => {
     const [selectedType, setSelectedType] = useState('');
-    const [currentData, setCurrentData] = useState(data);
     const types = useQuery( GET_TYPES );
     const generations = useQuery(GET_GENERATIONS);
     
     useEffect(() => {
         if ((!types.loading || !generations.loading) && data) loadingOn(false);
     }, []);
-
-    console.log(selectedType);
     
     const getByType = useQuery(GET_POKEMONS_BY_TYPE, {
         variables: {type: selectedType}
     });
-    console.log('getByType', getByType.data?.pokedex || data);
 
     if (types.error || generations.error || getByType.error) return <p>Error :(</p>;
 
@@ -37,7 +33,7 @@ const Main = ({title, data, loadingOn}) => {
                 </div>
             </div>
 
-            <SideBar items={types.data?.types} gen_items={generations.data?.generations} onSelect={setSelectedType}/>
+            <SideBar items={types.data?.types} gen_items={generations.data?.generations} onSelect={setSelectedType} selectedType={selectedType}/>
             <Catalog items={getByType.data?.pokedex.length > 0 ? getByType.data?.pokedex : data} />
 
         </div>

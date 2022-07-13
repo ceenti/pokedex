@@ -4,7 +4,6 @@ import PokeCard from '../PokeCard';
 
 const Catalog = ({title, items}) => (
     <main className='catalog'>
-        {console.log(items.length)}
         {items.map(item => <PokeCard key={item.id} pokemon={item} /> )}
     </main>
 );

@@ -19,6 +19,7 @@ const FrontCard = ({pokeId, name, sprite, types}) => {
                     width={200}
                     height={250}
                     onError={({ currentTarget }) => {
+                        currentTarget.style.opacity= "0.3";
                         currentTarget.onerror=null;
                         currentTarget.src="/assets/images/no_pokemon.png"
                     }}
