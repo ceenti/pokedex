@@ -3,6 +3,10 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+// Variables
+@import '../sass/utilities/variables';
+
 // Containers
 @import '../containers/Home/home';
 @import '../containers/CatalogContainer/catalogContainer';
@@ -20,11 +24,6 @@ body {
 @import '../components/TypePill/typePill';
 @import '../components//CategoryName/categoryName';
 @import '../components/Loading/loading';
-
-
-// Variables
-
-@import '../sass/utilities/variables';
 
 /*** General classes ***/
 // Generations
